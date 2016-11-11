@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15B42" minimumToolsVersion="Automatic">
+    <entity name="Department" representedClassName="Department" syncable="YES">
+        <attribute name="dId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="depttoemp" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Employee" inverseName="emptodept" inverseEntity="Employee" syncable="YES"/>
+    </entity>
+    <entity name="Employee" representedClassName="Employee" syncable="YES">
+        <attribute name="empID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="empName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="emptodept" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Department" inverseName="depttoemp" inverseEntity="Department" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Employee" positionX="-299" positionY="-12" width="128" height="88"/>
+        <element name="Department" positionX="-54" positionY="-9" width="128" height="90"/>
+    </elements>
+</model>
